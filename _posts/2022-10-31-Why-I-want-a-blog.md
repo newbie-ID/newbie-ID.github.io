@@ -10,4 +10,4 @@
 
 ## 相关学习连接
 1. [Git学习视频](https://www.bilibili.com/video/BV1FE411P7B3/?spm_id_from=333.337.search-card.all.click) 属于是迟早要学，早学早享受那种
-3. [大佬的仓库]([csjue/csjue.github.io: 这个网站是用来存放我的markdown笔记](https://github.com/csjue/csjue.github.io)) 面向CV开发
+3. [大佬的仓库](https://github.com/csjue/csjue.github.io) 面向CV开发
