@@ -2,4 +2,4 @@
 [开源项目来源](https://github.com/csjue/csjue.github.io) 感谢大佬
 
 
-1. [为什么想造这个博客](_post/为什么想造博客.md)
+1. [为什么想造这个博客](_posts/2022-10-31-WhyIwantablog.md)
