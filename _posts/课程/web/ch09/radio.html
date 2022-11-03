@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单选按钮</title>
+	</head>
+	<body>
+		<div id="app">
+      <p>
+        <input type="radio" v-model="gender" value="1">
+        <label>男</label>
+      </p>
+      <p>
+        <input type="radio" v-model="gender" value="0">
+        <label>女</label>
+      </p>
+      <p>{{ gender }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            gender: ''
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

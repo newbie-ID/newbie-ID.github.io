@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>indexDB管理客户端数据-建议图图书馆里系统</title>
+		<link type="text/css" rel = "stylesheet" href="books.css" />
+		<script type="text/javascript" src = "mybooks.js" ></script>		
+	</head>
+	<body class ="list">
+		<!-- 1.采用HTML6设计页面内容 -->
+		<header>
+			<h2>简易客户端图书管理系统</h2>
+			<nav>
+				<ul>
+					<li><a id = "a1" href ="#list" class= "list">图书汇总</a></li>
+					<li><a id = "a2" href ="#add" class= "add">添加图书</a></li>
+					<li><a id = "a3" href ="#setting" class= "setting">系统设置</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- 采用3个setion设计三个不同的导航页面 -->
+		<section class="list">
+		<!-- 第1个section事图书列表清单 -->
+		<form name="list" >
+			<input type="search" size = "30" name = "query" placeholder="请输入需要查询的图书名称" />
+			<input type = "button" value="检索图书" onclick="showBooks();" />
+			<br />
+			<textarea id = "booklist" rows="8" ></textarea> <!-- 查询显示结果 -->
+		</form>
+		</section>
+		<section class="add" >
+			<!--第2个section是图书添加  -->
+			<form name = "add" >
+				<fieldset>
+					<legend align="center">图书基本信息</legend>
+					图书标题：<input type="text" name="title" autocomplete="true" /><br />
+					作者：<input type="text" name="author" autocomplete="true" required /><br />
+					ISBN：<input type="text" name="isbn" autocomplete="true" pattern="[0-9]{13}" required/><br />
+					<input type="button" class="myButton" value="添加图书" onclick="addBook();" />
+				</fieldset>
+			</form>
+		</section>
+		<section class="setting">
+		<!-- 第3个section 事系统设置 -->
+		<form name = "setting" >
+			<input type="button" value="清除所有图书" class="myButton" onclick="deleteAllBooks();" />
+			<input type="button" value="清除数据库" class="myButton" onclick="deleteDatabase();" />
+			<input type="button" value="数据库初始化" class="myButton" onclick="loadBooks();" />
+		</form>
+		</section>
+		<footer>
+			<p>版权所以&copy:2017-2025 HTML5创意与推广工作室</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div>
+  <ul>
+    <li><a href="#/">Home</a></li>
+    <li><a href="#/about">About</a></li>
+  </ul>
+  <!-- 动态视图被挂载的元素 -->
+  <div id="view"></div>
+</div>
+<script type="text/javascript">
+  let Home = '<h1>This is Home!</h1>' // 视图模板 Home
+  let About = '<h1>This is About!</h1>' // 视图模板 About
+  let Router = function (el) { // 定义路由类
+    let view = document.getElementById(el)
+    let routes = [] // 路由规则列表
+    let load = function (route) { // 加载视图
+      route && (view.innerHTML = route.template)
+    }
+    let redirect = function () { // 分发视图
+      let url = window.location.hash.slice(1) || '/'
+      for (let route of routes) {
+        url === route.url && load(route)
+      }
+    }
+    this.push = function (route) { // 添加路由规则
+      routes.push(route)
+    }
+    window.addEventListener('load', redirect, false) // 页面加载时
+    window.addEventListener('hashchange', redirect, false) // URL变化时
+  }
+  let router = new Router('view') // 实例化路由
+  router.push({ // 添加路由规则
+    url: '/',
+    template: Home
+  })
+  router.push({
+    url: '/about',
+    template: About
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for指令</title>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+        <li v-for="(book, index) of books">{{ index }}. {{ book.title }}</li>
+      </ul>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            books: [
+              {title: 'Java无难事'},
+              {title: 'VC++深入详解'},
+              {title: 'Servlet/JSP深入详解'}
+            ]
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

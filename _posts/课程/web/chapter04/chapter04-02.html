@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+  <button-counter></button-counter> // 调用两次组件
+  <button-counter></button-counter>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  let jack = {
+    counter: 0
+  }
+  Vue.component('button-counter', {
+    data () { // 函数类型
+      return jack
+      // 深拷贝已有对象
+      // return JSON.parse(JSON.stringify(jack))
+      // 定义新对象
+      // return {
+      //   counter: 0
+      // }
+    },
+    template: '<button @click="counter++">click {{counter}} times</button>'
+  })
+  let vm = new Vue({
+    el: '#app' // mount到DOM上
+  })
+</script>
+</body>
+</html>

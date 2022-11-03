@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在组件上使用v-model</title>
+	</head>
+	<body>
+		<div id="app">
+      <my-input v-model="message"></my-input>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        }
+      })
+      app.component('MyInput', {
+        props: ['modelValue'],
+        /*
+        template: `
+          <div>
+            <input type="text"
+              :value="modelValue"
+              @input="$emit('update:modelValue', $event.target.value)">
+            <p>{{ modelValue }}</p>
+          </div>
+        `,*/
+        template: '<input type="text" v-model="value">',
+        computed: {
+          value: {
+            get(){
+              return this.modelValue
+            },
+            set(newValue){
+              this.$emit('update:modelValue', newValue)
+            }
+          }
+        }
+      })
+      const vm = app.mount('#app')
+    </script>
+	</body>
+</html>
+

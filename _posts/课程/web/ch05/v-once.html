@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-once指令</title>
+    <style>
+      a {
+        margin: 20px;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app">
+			<p>
+        <a v-for="nav in navs" :href="nav.url" v-once>{{ nav.name }}</a>
+      </p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            navs: [
+              {name: '新闻', url: '/news'},
+              {name: '图书', url: '/books'},
+              {name: '视频', url: '/video'}
+            ]
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

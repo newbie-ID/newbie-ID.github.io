@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-if指令</title>
+	</head>
+	<body>
+		<div id="app">
+			<h1 v-if="yes">Yes!</h1>
+      <h1 v-if="no">No!</h1>
+      <h1 v-if="age > 25">Age: {{ age }}</h1>
+      <h1 v-if="name.indexOf('Smith') >= 0">Name: {{ name }}</h1>
+      <template v-if="!isLogin">
+        <p>username: <input type="text"></p>
+        <p>password: <input type="password"></p>
+        <p><button>登录</button></p>
+      </template>
+      
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            yes: true,
+            no: false,
+            age: 28,
+            name: 'Will Smith',
+            isLogin: false
+
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

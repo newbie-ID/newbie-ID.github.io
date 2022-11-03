@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<div id="app">
+  <ul>
+    <li><router-link to="/">Home</router-link></li>
+    <li>
+      <div><router-link to="/about">About</router-link></div>
+      <ul>
+        <!-- 3. 使用嵌套路由 -->
+        <li><router-link to="/about/author">About - Author</router-link></li>
+        <li><router-link to="/about/email">About - Email</router-link></li>
+      </ul>
+    </li>
+  </ul>
+  <router-view></router-view>
+</div>
+<script type="text/javascript">
+  let Home = { template: '<h1>This is Home!</h1>' } // Home组件
+  let About = { // About组件
+    template: '<div>' +
+    '<h1>This is About!</h1>' +
+    '<router-view></router-view>' +  // 1. 嵌套的动态视图区
+    '</div>'
+  }
+  let Author = { template: '<p>Author: lonelydawn</p>' } // Author组件
+  let Email = { template: '<p>Email: lonelydawn@sina.com</p>' } // Email组件
+  let routes = [ // 定义路由规则, 每一个路由规则应该映射一个视图组件
+    { path: '/', component: Home },
+    {
+      path: '/about',
+      component: About,
+      children: [ // 2. 嵌套子路由
+        { path: 'author', component: Author },
+        { path: 'email', component: Email }
+      ]
+    }
+  ]
+  let router = new VueRouter({ // 创建VueRouter实例, 并传入routes配置
+    routes
+  })
+  let app = new Vue({
+    router
+  }).$mount('#app')
+</script>
+</body>
+</html>

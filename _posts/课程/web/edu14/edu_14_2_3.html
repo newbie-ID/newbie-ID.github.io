@@ -1,0 +1,17 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>提示框使用实例</title>
+<script type="text/javascript">
+	function disp_prompt() {
+		var name = prompt("请输入您的姓名", "李大为");
+		if (name != null && name != "") {
+			document.write("您好，" + name + "!");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" onclick="disp_prompt()" value="单击显示提示框" />
+</body>
+</html>

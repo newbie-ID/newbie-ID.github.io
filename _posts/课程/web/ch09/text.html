@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单行文本输入框</title>
+	</head>
+	<body>
+		<div id="app">
+      <p><input type="text" v-model.lazy.trim="message"></p>
+      <p>message: {{ message }}</p>
+      <p><input type="text" v-model.number="num"></p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事',
+            num: 0
+          }
+        },
+        watch: {
+          message(){
+            console.log(this.message)
+          },
+          num(){
+            console.log(5 === this.num)
+            console.log(typeof this.num)
+          }
+        }
+        
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

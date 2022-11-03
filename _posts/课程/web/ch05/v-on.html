@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-on指令</title>
+	</head>
+	<body>
+		<div id="app">
+      <p>
+        <button v-on:click="count++">Add 1</button>
+        <span>count: {{ count }}</span>
+      </p>
+      <p>
+        <button @click="greet">Greet</button>
+      </p>
+      <p>
+        <button @click="say('Hi')">Hi</button>
+      </p>
+      <p>
+        <a href="1.jsp" @click.prevent.once="greet">链接</a>
+      </p>
+      <p>
+        <input type="text" @keyup.enter="greet">
+      </p>
+      <p>
+        <input type="text" @keyup.17.c="greet">
+      </p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      //var message = "Hello"
+      Vue.createApp({
+        data(){
+          return {
+            count: 0,
+            message: 'Hello Vue.js'
+          }
+        },
+        methods: {
+          greet(){
+            alert(this.message)
+          },
+          //greet: () => alert(this.message),
+          say(msg){
+            alert(msg)
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

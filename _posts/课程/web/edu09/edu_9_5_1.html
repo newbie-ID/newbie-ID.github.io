@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>  <meta charset="UTF-8">
+    <title>CSS列表属性综合应用</title>
+    <style type="text/css">
+        h3{color:"#ffffff";background-color:#9999ff;text-align:center;}
+        #li1{list-style-type:square;}
+        #li2{list-style-type:upper-roman;}
+        #li3{list-style-image:url("/images/small.jpg");list-style-position:inside;}
+        #li4{list-style-image:url("/images/small.jpg");list-style-position:outside;}
+        .sp1{font-weight:bolder;color:blue;}
+    </style>
+</head>
+<body>
+<h3>CSS列表属性综合应用</h3>
+<ul id="li1">
+    <li>专业目录
+        <ol id="li2">
+            <li>计算机科学与技术专业</li>
+            <li>软件工程</li>
+            <li>信息管理与信息系统</li>
+        </ol></li>
+    <li>图书
+        <ul id="li3" >
+            <li><span class="sp1">[inside]</span>计算机网络：计算机网络所属现代词，指的是将地理位置不同的具有独立功能的多台计算机及 其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</li>
+            <li id="li4"><span class="sp1">[outside]</span>数据库原理：是数据库初学者和初级开发人员不可多得的数据库宝典，其中融入了作者对数据库深入透彻的理解和丰富的实际操作经验。与第2版一样，本版也深入浅出地描绘了数据库原理及其应用。</li>
+        </ul>
+    </li>
+    <li>期刊目录</li>
+</ul>
+</body>
+</html>

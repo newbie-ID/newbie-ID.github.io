@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+  <h1>{{ title }}</h1>
+  <button-counter></button-counter>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  Vue.component('button-counter', { // 创建一个Vue组件
+    data () { // 必须使用函数类型
+      return {
+        counter: 1
+      }
+    },
+    template: '<button @click="counter++">clicked {{ counter }} times</button>'
+  })
+//  let vm = new Vue({
+//    el: '#app',   // mount到DOM上
+//    data: { // 对象类型
+//      title: 'A Vue App'
+//    }
+//  })
+  let vm = new Vue({
+    el: '#app',   // mount到DOM上
+    data() { // 函数类型
+      return {
+        title: 'A Vue App'
+      }
+    }
+  })
+</script>
+</body>
+</html>

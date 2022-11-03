@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>表格嵌套</title>
+<style type="text/css">
+ul {
+	list-style-type: none;
+}
+
+li {
+	width: 80px;
+	background: #00ccff;
+}
+
+p {
+	text-indent: 2em;
+	font-size: 16px;
+}
+</style>
+</head>
+<body>
+	<h4 align="center">表格嵌套</h4>
+	<table width="660px" border="1" align="center" bordercolor="#3333ff">
+		<tr>
+			<td width="170px">&nbsp;</td>
+			<td width="360px" rowspan="3"><p>地铁4号线横穿南京，……</td>
+			<td width="120">新闻链接</td>
+		</tr>
+		<tr>
+			<td><table width="100%" border="1" bordercolor="#33ff99">
+					<tr>
+						<td>科技</td>
+					</tr>
+					<tr>
+						<td>财经</td>
+					</tr>
+					<tr>
+						<td>探索</td>
+					</tr>
+				</table></td>
+			<td rowspan="2">
+				<ul>
+					<li><a href="http://www.baidu.com">百度</a></li>
+					<li><a href="http://www.163.com">网易</a></li>
+					<li><a href="http://www.sina.com">新浪</a></li>
+					<li><a href="http://www.sohu.com">搜弧</a></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</body>
+</html>

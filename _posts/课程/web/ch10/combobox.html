@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组合框</title>
+	</head>
+	<body>
+		<div id="app">
+      <combobox label="请选择您的信息来源"
+        :list="['网络', '报纸', '朋友介绍']"
+        v-model="selectVal">
+      </combobox>
+      <p>{{ selectVal }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({
+        data(){
+          return {
+            selectVal: ''
+          }
+        }
+      })
+      app.component('combobox', {
+        props: ['label', 'list', 'modelValue'],
+        template: `
+          <table>
+            <tr>
+              <td>{{ label }}</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" 
+                  :value="modelValue"
+                  @input="$emit('update:modelValue', $event.target.value)">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <select :value="modelValue"
+                  @change="$emit('update:modelValue', $event.target.value)">
+                  <option disabled value="">请选择</option>
+                  <option v-for="item of list">{{ item }}</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        `
+      })
+      const vm = app.mount('#app')
+    </script>
+	</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>异步更新队列</title>
+	</head>
+	<body>
+		<div id="app">
+      <my-component></my-component>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({})
+			app.component('MyComponent', {
+				data(){
+					return {
+						message: 'Java无难事'
+					}
+				},
+				methods: {
+					change(){
+						this.message = 'Vue 3.x从入门到实战'												
+						//Vue.nextTick(() => console.log(this.$refs.pElt.textContent))
+						this.$nextTick(function(){
+							console.log(this.$refs.pElt.textContent)
+						})
+					}
+				},
+				template: `
+					<div>
+						<p ref="pElt">{{ message }}</p>
+						<button @click="change">修改内容</button>
+					</div>
+				`
+			})
+			app.mount('#app')
+    </script>
+	</body>
+</html>
+

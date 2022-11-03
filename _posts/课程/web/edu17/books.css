@@ -1,0 +1,21 @@
+/* book.css */
+/* 2.表现设计（定义域和列表样式） */
+from { width:400px;margin:5px auto;
+	heright:100px;border:1px double #0066FF;padding:20px;}
+form { text-align:center;}
+ul{list-style-type:none;text-align:center;}
+ul li{display: inline-block;width:90px;}
+ul li a:link,ul li a:active, ul li a:visited { text-decoration:none;}
+ul li a:hover { border-bottom:3px solid read;}
+h2 { height:48px; text-align:center; background:#EAEAEA; padding-top:15px; vertical-align:middler;}
+.myButton {margin:20px auto; width: 100px;height:30px;background:#DADADA;}
+/* 初始时所有section 均不可见 */
+section { display:none;}
+/* 当body和section具有相同的class属性时， section则显示*/
+body.list section.list, body.add section.add,body.setting section.setting { display:block;}
+footer { padding: 0px; margin: 0 auto; text-align:center;background:#DADADA;height:40px;}
+p { padding-top: 10px; font-size:16px;}
+#booklist{width:100%}
+
+
+

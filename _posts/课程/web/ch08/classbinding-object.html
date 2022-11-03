@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定class的对象语法</title>
+    <style>
+      .active {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      .text-danger {
+        background-color: red;
+      }
+      .static {
+        border: 2px solid black;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app">
+      <!--
+      <div class="static" :class="{active: isActive, 'text-danger': hasError}"></div>
+      -->
+      <div class="static" :class="objectClass"></div>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            /*
+            objectClass: {
+              active: true,
+              'text-danger': false
+            }*/
+            isActive: true,
+            error: null
+          }
+        },
+        computed: {
+          objectClass(){
+            return {
+              active: this.isActive && !this.error,
+              'text-danger': this.error && this.error.type === 'fatal'
+            }
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

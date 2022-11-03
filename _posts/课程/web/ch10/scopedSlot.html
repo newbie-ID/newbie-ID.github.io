@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作用域插槽</title>
+	</head>
+	<body>
+		<div id="app">
+      <!--
+      <my-button>
+        <template v-slot:default="slotProps">
+          {{ slotProps.values.register }}
+        </template>
+      </my-button>
+      -->
+      <my-button>
+        <template v-slot="{values: titles}">
+          {{ titles.register }}
+        </template>
+        <template v-slot:other="{label}">
+          {{ label.register }}
+        </template>
+      </my-button>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({})
+      app.component('MyButton', {
+        data(){
+          return {
+            titles: {
+              login: '登录',
+              register: '注册'
+            }
+          }
+        },
+        template: `
+          <label><slot name="other" :label="titles">{{titles.login}}</slot></label>
+          <button><slot :values="titles">{{titles.login}}</slot></button>
+        `
+      })
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+

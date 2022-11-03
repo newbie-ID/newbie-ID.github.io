@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选择框</title>
+	</head>
+	<body>
+		<div id="app">
+      <h3>单选选择框</h3>
+      <p>
+        <select v-model="education">
+          <option disabled value="">请选择您的文凭</option>
+          <option>高中</option>
+          <option>本科</option>
+          <option>硕士</option>
+          <option>博士</option>
+        </select>
+      </p>
+      <p>您的文凭是：{{ education }}</p>
+
+      <h3>多选选择框</h3>
+      <p>
+        <select v-model="searches" multiple>
+          <option v-for="option of options" :value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+      </p>
+      <p>您选择搜索引擎是：{{ searches }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            education: '',
+            searches: [],
+            options: [
+              {text: '百度', value: 'baidu.com'},
+              {text: '谷歌', value: 'google.com'},
+              {text: '必应', value: 'bing.com'}
+            ]
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

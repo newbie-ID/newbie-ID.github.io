@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定class的数组语法</title>
+    <style>
+      .active {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+      }
+      .text-danger {
+        background-color: red;
+      }
+      .static {
+        border: 2px solid black;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app">
+      <!--
+      <div :class="['active', 'text-danger']"></div>
+      -->
+      <!--
+      <div :class="[isActive ? activeClass : '', errorClass]"></div>
+      -->
+      <div :class="[{active: isActive}, errorClass]"></div>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            activeClass: 'active',
+            errorClass: 'text-danger',
+            isActive: true
+          }
+        },
+        
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

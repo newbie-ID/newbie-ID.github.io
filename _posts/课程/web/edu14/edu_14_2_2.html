@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>确认框使用实例</title>
+<script type="text/javascript">
+	function show_confirm() {
+		var r = confirm("请选择按钮!");
+		if (r == true) {
+			alert("您按了确定按钮！");
+		} else {
+			alert("您按了取消按钮！");
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" onclick="show_confirm()" value="显示确认框" />
+</body>
+</html>

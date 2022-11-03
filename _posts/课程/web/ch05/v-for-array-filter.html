@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for指令</title>
+	</head>
+	<body>
+		<div id="app">
+      <ul>
+        <!--
+        <li v-for="item in evenNumbers">{{ item }}</li>
+        -->
+        <li v-for="item in even(numbers)">{{ item }}</li>
+      </ul>
+      <span v-for="n in 10">{{ n }}</span>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            numbers: [1, 2, 3, 4, 5, 6, 7]
+          }
+        },
+        computed: {
+          evenNumbers(){
+            return this.numbers.filter(number => number % 2 == 0)
+          }
+        },
+        methods:{
+          even(numbers){
+            return this.numbers.filter(number => number % 2 == 0)
+          }
+        }
+      }).mount('#app')
+
+    </script>
+	</body>
+</html>
+

@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function submitTest() {
+		var msg = "表单数据的获取：\n";
+		var username = document.getElementById("input1").value;
+		msg += "用户名:";
+		msg += username;
+		var psw = document.getElementById("input2").value;
+		msg += "，\n密码:是";
+		msg += psw;
+		alert(msg);
+		return false;
+	}
+	function resetTest() {
+		alert("将数据清空");
+	}
+</script>
+<style type=“text/css“>                     fieldset{width:350px;height:150px;}
+</style>
+</head>
+<body>
+	<form onsubmit="return submitTest();" onreset="resetTest()">
+		<fieldset>
+			<legend>表单数据提交</legend>
+			<br>
+			<label>用户名：</label><input type="text" id="input1"> <br>
+			<label>密&nbsp;码：</label><input type="password" id="input2"> <br>
+			<input type="submit" value="提交"> <input type="reset"
+				value="重置">
+		</fieldset>
+	</form>
+</body>
+</html>

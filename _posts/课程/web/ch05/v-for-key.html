@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>v-for</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>
+                ID：<input type="text" v-model="bookId"/>
+                书名：<input type="text" v-model="title"/>
+                <button v-on:click="add()">添加</button>
+            </p>
+            <p v-for="book in books" :key="book.id">
+                <input type="checkbox">
+                <span>ID：{{book.id}} , 书名：{{book.title}}</span>
+            </p>
+        </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const vm = Vue.createApp({
+            data() {
+                return {
+                    bookId: '',
+                    title: '',
+                    books: [
+                        {id: 1 ,title: 'Java无难事'},
+                        {id: 2, title: 'VC++深入详解'},
+                        {id: 3, title: 'Servlet/JSP深入详解'}
+                    ]
+                }
+            },
+            methods:{
+                add(){
+                  this.books.unshift({
+                      id : this.bookId,
+                      title : this.title
+                  });
+                  this.bookId = '';
+                  this.title = '';
+                }
+            }
+        }).mount('#app');
+    </script>
+  </body>
+</html>

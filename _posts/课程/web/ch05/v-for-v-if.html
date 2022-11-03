@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for指令</title>
+	</head>
+	<body>
+		<div id="app">
+      <h1>已完成的计划</h1>
+      <ul>
+        <tempalte v-for="plan in plans">
+          <li v-if="plan.isComplete">{{plan.content}}</li>
+        </tempalte>
+      </ul>
+
+      <h1>未完成的计划</h1>
+      <ul>
+        <tempalte v-for="plan in plans">
+          <li v-if="!plan.isComplete">{{plan.content}}</li>
+        </tempalte>
+      </ul>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      Vue.createApp({
+        data(){
+          return {
+            plans: [
+              {content: '开会', isComplete: false},
+              {content: '做饭', isComplete: true},
+              {content: '买菜', isComplete: true},
+              {content: '写书', isComplete: false}
+            ]
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

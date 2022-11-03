@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>三种按钮的应用</title>
+<style type="text/css">
+input {
+	width: 100px;
+	height: 25px;
+}
+
+body {
+	text-align: center;
+}
+
+fieldset {
+	width: 400px;
+	height: 180px;
+}
+</style>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>三种按钮的应用</legend>
+			<h3>请输入用户信息：</h3>
+			用户名：<input type="text" name="username" size="10" /> 密码：<input
+				type="password" name="password" size="10" /><br />
+			<br> &nbsp;&nbsp;<input type="submit" name="submit" value="提交" />
+			<input type="reset" name="reset" value="重置" /> <input type="button"
+				name="button" value="注册新用户" onclick="javascript:alert('注册新用户');" />
+		</fieldset>
+	</form>
+</body>
+</html>

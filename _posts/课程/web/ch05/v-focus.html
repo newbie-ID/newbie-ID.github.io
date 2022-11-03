@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-focus</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-focus>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      /*const app = Vue.createApp({})
+      app.directive('focus', {
+        mounted(el){
+          el.focus()
+        }
+      })*/
+      const app = Vue.createApp({
+        directives: {
+          focus: {
+            mounted(el){
+              el.focus()
+            }
+          }
+        }
+      })
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算属性</title>
+	</head>
+	<body>
+		<div id="app">
+			<p>firstName: <input type="text" v-model="firstName"></p>
+      <p>lastName: <input type="text" v-model="lastName"></p>
+      <p>fullName: {{ fullName }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            firstName: 'san',
+            lastName: 'zhang'
+          }
+        },
+        computed: {
+          fullName: {
+            get(){
+              return this.firstName + ' ' + this.lastName
+            },
+            set(newValue){
+              let names = newValue.split(' ')
+              this.firstName = names[0]
+              this.lastName = names[1]
+            }
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

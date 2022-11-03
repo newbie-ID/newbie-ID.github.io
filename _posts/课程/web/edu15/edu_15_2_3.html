@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>下拉菜单</title>
+<script language="javascript">
+	function changeImage() {
+		var a = document.getElementById("game").selectedIndex;
+		//获取下拉框中选择项
+		document.getElementById("show").src = document.getElementById("game").options[a].value;//将图片更改为对应选择项
+	}
+</script>
+</head>
+<body>
+	<div align="center">
+		<form>
+			<select id="game" onChange="changeImage()">
+				<option value="/images/pic4.jpg">--请选择--</option>
+				<option value="/images/pic0.jpg">平板电视</option>
+				<option value="/images/pic1.jpg">笔记本电脑</option>
+				<option value="/images/pic2.jpg">单反相机</option>
+				<option value="/images/pic3.jpg">智能手机</option>
+			</select>
+		</form>
+	</div>
+	<p align="center">
+		<img src="/images/pic4.jpg" id="show">
+	</p>
+</body>
+</html>

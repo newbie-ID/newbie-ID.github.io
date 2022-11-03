@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>localStorage对象的应用</title>
+<style type="text/css">
+div {
+	text-align: center;
+	padding: 20px;
+	border: 10px ridge #005A9C;
+	width: 350px;
+	height: 250px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div>
+		<h3>最可爱的人评选</h3>
+		<img src="45567.jpg" width="80" height="80" border="0" alt=""><br>
+		<p id="result"></p>
+		<p>刷新页面票数会增长。</p>
+		<p>请关闭浏览器后重试仍会增长</p>
+	</div>
+	<script type="text/javascript">
+		var tickets = 0;
+		localStorage.setItem(tickets, 0);
+		if (localStorage.tickets) {
+			localStorage.tickets = parseInt(localStorage.tickets) + 1;
+		} else {
+			localStorage.tickets = 1;
+		}
+		document.getElementById("result").innerHTML = "已投: "
+				+ localStorage.tickets + "票";
+	</script>
+</body>
+</html>

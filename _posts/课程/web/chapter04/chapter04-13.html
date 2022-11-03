@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+  <h1>{{ title }}</h1>
+  <h1>{{ title | supplyTitle1 }}</h1>
+  <!-- 存在多个filter时,将从左向右执行 -->
+  <h1>{{ title | supplyTitle1 | supplyTitle2 }}</h1>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  let vm = new Vue({
+    el: '#app',
+    data () {
+      return {
+        title: 'Test#%for#%Filter.'
+      }
+    },
+    filters: {
+      supplyTitle1 (value) { // 表达式的值将作为形参传入
+        console.log('Supply Title 1')
+        return value.replace(/#/g, ' ')
+      },
+      supplyTitle2 (value) {
+        console.log('Supply Title 2')
+        return value.replace(/%/g, '')
+      }
+    }
+  })
+</script>
+</script>
+</body>
+</html>

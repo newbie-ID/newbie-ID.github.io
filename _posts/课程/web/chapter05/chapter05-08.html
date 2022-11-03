@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <meta charset="utf-8">
+</head>
+<body>
+<style>
+  .list-move { /* 定义过渡效果 */
+    transition: transform 1s;
+  }
+</style>
+<div id="app">
+  <button @click="orderByRandom()">随机顺序</button>
+  <br>
+  <transition-group name="list" tag="ul">
+    <li
+      v-for="item in list"
+      :key="item">
+      {{ item }}
+    </li>
+  </transition-group>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  // 声明 Vue 实例
+  let vm = new Vue({
+    el: '#app',
+    data () {
+      return {
+        list: [0, 1, 2, 3, 4]
+      }
+    },
+    methods: {
+      orderByRandom () { // 随机改变数组元素的位置
+        let tmp = [] // 初始化新数组
+        for (let i = 0; i < this.list.length; i++) {
+          let num = Math.floor(Math.random() *  (this.list.length - 0.001)) // 随机新元素
+          // 当元素不在数组中时，将其加入到数组中
+          let index = tmp.indexOf(num)
+          while (index !== -1) {
+            num = Math.floor(Math.random() * (this.list.length - 0.001))
+            index = tmp.indexOf(num)
+          }
+          tmp.push(num)
+        }
+        this.list = tmp // 更改list为新的数组
+      }
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>多行文本输入框</title>
+	</head>
+	<body>
+		<div id="app">
+      <textarea v-model="message"></textarea>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

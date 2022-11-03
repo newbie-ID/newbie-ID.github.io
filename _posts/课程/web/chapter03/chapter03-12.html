@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+  <!-- 自定义组件v-model -->
+  <custom-screen v-model="text"></custom-screen>
+  <br>
+  <!-- 原生元素v-model -->
+  <input type="text" v-model="text">
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  Vue.component('custom-screen', {
+    // 使用value属性接收外部传入的值
+    props: ['value'],
+    methods: {
+      handleReset () {
+        console.log('重置为\'\'')
+        this.$emit('input', '') // 使用$emit发送input事件，并将目标值作为参数传出
+      }
+    },
+    template: `
+      <div>
+        <h2>输入值为: {{ value }}</h2>
+        <button @click="handleReset">重置为空</button>
+      </div>
+     `
+  })
+  let vm = new Vue({
+    el: '#app',
+    data: () => ({ text: '' })
+  })
+</script>
+</body>
+</html>

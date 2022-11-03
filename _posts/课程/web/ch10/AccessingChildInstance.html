@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>访问子组件</title>
+	</head>
+	<body>
+		<div id="app">
+      <parent></parent>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const child = {
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        },        
+        template: '<p>{{ message }}</p>'
+      }
+      const parent = {
+        mounted(){
+          this.$refs.inputElement.focus()
+          console.log(this.$refs.childComponent.message)
+        },
+        template: `
+          <div>
+            <input type="text" ref="inputElement">
+            <child ref="childComponent"/>
+          </div>  
+          `,
+        components: {
+          child
+        }
+      }
+      Vue.createApp({
+        components: {
+          parent
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

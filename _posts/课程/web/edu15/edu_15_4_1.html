@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>键盘事件举例</title>
+<script type="text/javascript">
+	function k_press(){
+	    if(window.event.keyCode!=13){
+	      if(event.keyCode<48 || event.keyCode>57){
+	        alert("你输入学号错误！");
+	      }
+	    }else{
+	       if(myform.s_no.value.length<=0){//未输入字符 
+	            alert("学号不能为空");
+	       }else{
+	         alert("你的学号为："+myform.s_no.value);
+	      }
+	    }
+	}
+	function k_press1(){
+		if(window.event.keyCode==13){
+			alert("你的姓名为："+myform.s_name.value);
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="myform" method=“get " action="">
+		学号：<input type="text" name="s_no" id="s_no" onKeyPress="k_press();"><br>
+		姓名：<input type=“text” name=“s_name” id=“s_name”
+			onkeypress=“k_press1();"> <input type="reset">
+	</form>
+</body>
+</html>

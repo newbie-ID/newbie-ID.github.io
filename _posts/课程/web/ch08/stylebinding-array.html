@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定style的数组语法</title>
+	</head>
+	<body>
+		<div id="app">
+      <div :style="[baseStyles, moreStyles]">Java无难事</div>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            baseStyles: {
+              width: '300px',
+              height: '300px',
+              border: '2px solid black'
+            },
+            moreStyles: {
+              color: 'red',
+              backgroundColor: 'gray'
+            }
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

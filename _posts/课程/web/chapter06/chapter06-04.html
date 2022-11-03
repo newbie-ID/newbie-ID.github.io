@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+<div id="app">
+  <ul>
+    <li><router-link to="/">Home</router-link></li>
+    <li @click="add">
+      <!-- 2. 参数num由实例传入路由 -->
+      <router-link :to="'/about/' + num">About</router-link>
+    </li>
+  </ul>
+  <router-view></router-view>
+</div>
+<script type="text/javascript">
+  let Home = { template: '<h1>This is Home!</h1>' } // Home组件
+  let About = { // About组件
+    template: '<div>' +
+    '<h1>This is About!</h1>' +
+    '<p>num: {{ $route.params.num }}</p>' + // 3. 在组件中显示参数 num
+    '</div>'
+  }
+  let routes = [ // 定义路由规则, 每一个路由规则应该映射一个视图组件
+    { path: '/', component: Home },
+    { path: '/about/:num', component: About } // 1. 定义了参数 num, 格式如 /:num
+  ]
+  let router = new VueRouter({ // 创建VueRouter实例, 并传入routes配置
+    routes
+  })
+  let app = new Vue({
+    data () {
+      return { num: 0 }
+    },
+    methods: { // 当点击About时, num值自增1
+      add () { this.num++ }
+    },
+    router
+  }).$mount('#app')
+</script>
+</body>
+</html>

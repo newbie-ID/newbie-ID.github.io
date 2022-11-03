@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义函数的应用</title>
+<script type="text/javascript">
+	function area(a, b, c) {
+		s = (parseInt(a.value) + parseInt(b.value)) / 2 * c.value;
+		alert("梯形的面积为" + s);
+	}
+</script>
+</head>
+<body>
+	<form>
+		上底:<input type="text" name="a"><br /> 下底:<input type="text"
+			name="b"><br /> 高度:<input type="text" name="c"><br />
+		<input type="button" onclick="area(a,b,c)" value="求面积"><br />
+	</form>
+</body>
+</html>

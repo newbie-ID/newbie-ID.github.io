@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算属性</title>
+    <style>
+			body {
+				width: 600px;
+			}
+			table {
+			    border: 1px solid black;
+			}
+			table {
+			    width: 100%;
+			}
+			th {
+			    height: 50px;
+			}
+			th, td {
+			    border-bottom: 1px solid #ddd;
+			    text-align: center;
+			}
+			span {
+				float: right;
+			}
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+      <table>
+        <thead>
+          <tr>
+            <th>编号</th>
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>金额</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(book, index) in books">
+            <td>{{ book.id }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.price }}</td>
+            <td>
+              <button @click="book.count--" :disabled = "book.count === 0">-</button>
+              {{ book.count }}
+              <button @click="book.count++">+</button>
+            </td>
+            <td>{{ itemPrice(book.price, book.count) }}</td>
+            <td><button @click="deleteItem(index)">删除</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <span>总价：￥{{ totalPrice }}</span>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      Vue.createApp({
+        data() {
+          return {
+            books: [
+              {
+                id: 1,
+                title: 'Java无难事',
+                price: 188,
+                count: 1
+              },
+              {
+                id: 2,
+                title: 'VC++深入详解',
+                price: 168,
+                count: 1
+              },
+              {
+                id: 3,
+                title: 'Servlet/JSP深入详解',
+                price: 139,
+                count: 1
+              }
+            ]
+          }
+        },
+        methods: {
+          itemPrice(price, count){
+            return price * count;
+          },
+          deleteItem(index){
+            this.books.splice(index, 1)
+          }
+        },
+        computed: {
+          totalPrice(){
+            let total = 0
+            for(let book of this.books){
+              total += this.itemPrice(book.price, book.count)
+            }
+            return total
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

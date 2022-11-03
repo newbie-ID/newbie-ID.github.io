@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+  let store = {
+    msg: '学习已经很可怜了',
+    logMsg () {
+      let store = {
+        msg: '你能不能长点心',
+        logMsg: () => {
+          let store = {
+            msg: '给人多留点时间吧',
+            logMsg: () => {
+              console.log(this.msg)
+            }
+          }
+          store.logMsg()
+        }
+      }
+      store.logMsg()
+    }
+  }
+  store.logMsg()
+</script>
+</body>
+</html>

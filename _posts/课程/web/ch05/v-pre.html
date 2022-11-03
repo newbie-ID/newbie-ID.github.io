@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-pre指令</title>
+    <style>
+      a {
+        margin: 20px;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app">
+			<p v-pre>{{ message }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

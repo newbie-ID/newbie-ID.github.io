@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+/*header*/
+#header {
+	width: 100%;
+	height: 150px;
+}
+
+h1 {
+	float: left;
+}
+
+.headerR {
+	width: 752px;
+	height: 116px;
+	background: url(/images/1.png) no-repeat;
+	float: left;
+}
+
+#nav {
+	background: #FFDD99;
+	width: 100%;
+	height: 48px;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+#nav li {
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 0 10px
+}
+
+#nav li a:link, #nav li a:visited {
+	color: white;
+	text-decoration: none
+}
+/*#content*/
+#content {
+	width: 980px;
+	height: 460px;
+	margin: 0 auto;
+	background: #ccc;
+}
+/*footerwrap*/
+#footerwrap {
+	width: 100%;
+	height: 79px;
+	border-top: 6px solid #666;
+	background: #fff;
+}
+
+.footer {
+	width: 980px;
+	height: 80px;
+	margin: 0 auto;
+	text-align: center
+}
+
+.footer p {
+	color: #000;
+	font-size: 12px;
+	margin-top: 3px
+}
+
+body, ul, li, a, div {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin-top: 50px;
+	background-color: #e6e6e6;
+	color: #fff;
+}
+
+.menu {
+	font-size: 0;
+	padding: 0;
+	height: 50px;
+	padding-left: 5%;
+	background-color: #00a2ca;
+	position: relative;
+}
+
+.menubar {
+	margin: 0 auto;
+	position: absolute;
+	list-style-type: none;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.menubar li {
+	padding: 0px 5px;
+	display: inline-block;
+	cursor: pointer;
+	line-height: 50px;
+}
+
+.menubar li:hover {
+	background-color: #0095bb;
+}
+
+.menubar li.menu-value {
+	background-color: #0095bb;
+}
+
+.menubar a {
+	display: block;
+	height: 50px;
+	font-family: "微软雅黑", "Microsoft Yahei", "Hiragino Sans GB", tahoma,
+		arial, "宋体";
+	font-size: 15px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}

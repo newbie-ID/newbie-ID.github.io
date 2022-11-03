@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单</title>
+    <style>
+			body {
+				width: 600px;
+			}
+			a {
+				text-decoration: none;
+				display: block;
+				color: #fff;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #fff;
+				border-width: 1px 1px 0 0;
+				background: #255f9e;
+			}
+			li {
+				list-style-type: none;
+			}
+			#app > li {
+				list-style-type: none;
+				float: left;
+				text-align: center;
+				position: relative;
+			}
+			#app li a:hover {
+				color: #fff;
+				background: #ffb100;
+			}
+			#app li ul {
+				position: absolute;
+				left: -40px;
+				top: 40px;
+				margin-top: 1px;
+				font-size: 12px;
+			}
+      [v-cloak] {
+        display: none;
+      }
+		</style>
+	</head>
+	<body>
+		<div id = "app" v-cloak>
+      <li v-for="menu in menus" 
+        @mouseover="menu.show = !menu.show"
+        @mouseout="menu.show = !menu.show">
+        <a :href="menu.url">{{ menu.name }}</a>
+        <ul v-show="menu.show">
+          <li v-for="subMenu in menu.subMenus">
+            <a :href="subMenu.url">{{ subMenu.name }}</a>
+          </li>
+        </ul>
+      </li>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const data = {
+        menus: [
+          {
+            name: '我的淘宝', url: '#', show: false, subMenus: [
+                {name: '已买到的宝贝', url: '#'},
+                {name: '已卖出的宝贝', url: '#'}
+              ]
+          },
+          {
+            name: '收藏夹', url: '#', show: false, subMenus: [
+                {name: '收藏的宝贝', url: '#'},
+                {name: '收藏的店铺', url: '#'}
+              ]
+          }
+        ]
+      };
+      const vm = Vue.createApp({
+        data() {
+          return data;
+        }
+      }).mount('#app');
+    </script>
+	</body>
+</html>
+

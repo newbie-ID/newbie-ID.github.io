@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>依赖注入</title>
+	</head>
+	<body>
+		<div id="app">
+      <parent></parent>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const child = {
+        inject: ['msg', 'hello'],
+        mounted(){
+          this.hello("lisi")
+        },
+        template: '<p>{{ msg }}</p>'
+      }
+      const parent = {
+        components: {
+          child
+        },
+        template: '<child />'
+      }
+      Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        },
+        methods: {
+          sayHello(name){
+            console.log("Hello, " + name)
+          }
+        },
+        provide(){
+          return {
+            msg: this.message,
+            hello: this.sayHello
+          }
+        },
+        components: {
+          parent
+        }
+      }).mount('#app')
+      
+    </script>
+	</body>
+</html>
+

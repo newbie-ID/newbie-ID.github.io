@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全局变量和局部变量使用实例</title>
+</head>
+<body>
+	<h4>全局变量和局部变量使用</h4>
+	<script type="text/javascript">
+		var test1 = 100;
+		var test2 = 100;
+		function checkScope() {
+			var test1 = 200; //同名局部变量
+			test2 = 200;
+			document.write("局部变量test1的值为" + test1);
+			document.write("<br/>");
+		}
+		checkScope();
+		document.write("全局变量test1的值为" + test1);
+		document.write("<br/>");
+		document.write("全局变量test2的值为" + test2);
+	</script>
+</body>
+</html>

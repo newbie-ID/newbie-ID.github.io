@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>访问根实例</title>
+	</head>
+	<body>
+		<div id="app">
+      <parent></parent>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const child = {
+        methods: {
+          accessRoot(){
+            console.log(this.$root.price)
+            console.log(this.$root.totalPrice)
+            console.log(this.$root.hello())
+          }
+        },
+        template: '<button @click="accessRoot">访问根实例</button>'
+      }
+      const parent = {
+        template: '<child />',
+        components: {
+          child
+        }
+      }
+      Vue.createApp({
+        data(){
+          return {
+            price: 188
+          }
+        },
+        computed: {
+          totalPrice(){
+            return this.price * 10;
+          }
+        },
+        methods: {
+          hello(){
+            return "Hello, Vue.js"
+          }
+        },
+        components: {
+          parent
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

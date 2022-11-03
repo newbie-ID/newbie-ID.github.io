@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>命名插槽</title>
+	</head>
+	<body>
+		<div id="app">
+      <base-layout>
+        <template #header>
+          <h1>这是页头部分</h1>
+        </template>
+        <template #default>
+          <section>这是一个正文段落</section>
+          <section>另一个正文段落</section>
+        </template>
+        <template #footer>
+          <h3>这是页脚部分</h3>
+        </template>
+      </base-layout>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({})
+      app.component('base-layout', {
+        template: `
+          <div>
+            <header><slot name="header"></slot></header>
+            <main><slot></slot></main>
+            <footer><slot name="footer"></slot></footer>
+          </div>
+        `
+      })
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+

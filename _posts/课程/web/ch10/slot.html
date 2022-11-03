@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插槽</title>
+	</head>
+	<body>
+		<div id="app">
+      
+      <greeting>Hello {{ name }}</greeting>
+      
+      <!--
+      <greeting></greeting>
+      -->
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({
+        data(){
+          return {
+            name: 'lisi'
+          }
+        }
+      })
+      app.component('greeting', {
+        data(){
+          return {
+            name: 'zhangsan'
+          }
+        },
+        template: '<div><slot>Hello Java</slot></div>'
+      })
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+

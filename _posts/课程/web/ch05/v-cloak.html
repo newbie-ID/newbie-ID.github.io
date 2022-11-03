@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-cloak指令</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+	</head>
+	<body>
+		<div id="app">
+			<h1 v-cloak>{{ message }}</h1>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

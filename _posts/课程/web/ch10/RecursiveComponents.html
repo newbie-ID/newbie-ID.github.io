@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>递归组件</title>
+	</head>
+	<body>
+		<div id="app">
+      <category-component :list="categories"></category-component>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const CategoryComponent = {
+        name: 'catComp',
+        props: {
+          list: {
+            type: Array
+          } 
+        },
+        template: `
+          <ul>
+            <template v-if="list">
+              <li v-for="cat in list">
+                {{ cat.name }}
+                <catComp :list="cat.children" />
+              </li>
+            </template>
+          </ul>
+        `
+      }
+      Vue.createApp({
+        data(){
+          return {
+            categories: [
+              {
+                name: '程序设计', 
+                children: [
+                  {
+                    name: 'Java', 
+                    children: [
+                      {name: 'Java SE'}, 
+                      {name: 'Java EE'}
+                    ]
+                  }, 
+                  {
+                    name: 'C++'
+                  }
+                ]
+              },
+              {
+                name: '前端框架', 
+                children: [
+                  {name: 'Vue.js'}, 
+                  {name: 'React'}
+                ]
+              }
+            ]
+          }
+        },
+        components: {
+            CategoryComponent
+        }
+      }).mount('#app');
+      
+    </script>
+	</body>
+</html>
+

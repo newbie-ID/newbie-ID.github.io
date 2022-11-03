@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-model指令</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="message">
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            message: 'Java无难事'
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

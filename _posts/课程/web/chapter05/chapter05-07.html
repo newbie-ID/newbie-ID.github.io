@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <meta charset="utf-8">
+</head>
+<body>
+<style>
+  .list-enter, .list-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .list-enter-active,
+  .list-leave-active {
+    transition: all 1s linear;
+  }
+</style>
+<div id="app">
+  <button @click="addNewItem()">添加元素</button>
+  <br>
+  <transition-group name="list" tag="ul">
+    <li
+      v-for="item in list"
+      :key="item">
+      {{ item }}
+    </li>
+  </transition-group>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  // 声明 Vue 实例
+  let vm = new Vue({
+    el: '#app',
+    data () {
+      return {
+        list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      }
+    },
+    methods: {
+      addNewItem () {
+        this.list.push(this.list.length)
+      }
+    }
+  })
+</script>
+</body>
+</html>

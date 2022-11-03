@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算属性</title>
+	</head>
+	<body>
+		<div id="app">
+			<p>原始字符串：{{ message }}</p>
+      <p>反转后的字符串：{{ message.split('').reverse().join('') }}</p>
+      <p>计算后的反转字符串：{{ reversedMessage }}</p>
+      <p>调用方法后的反转字符串：{{ reversedMessage2() }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            message: 'Hello Vue.js'
+          }
+        },
+        computed: {
+          reversedMessage(){
+            console.log("computed")
+            return this.message.split('').reverse().join('');
+          }
+        },
+        methods: {
+          reversedMessage2(){
+            console.log("method")
+            return this.message.split('').reverse().join('');
+          }
+        }
+      }).mount('#app')
+      let msg = vm.reversedMessage
+      vm.reversedMessage2()
+    </script>
+	</body>
+</html>
+

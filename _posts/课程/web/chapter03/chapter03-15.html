@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div id="app">
+  <div style="float: left; width: 160px;">
+    <h2>用户列表</h2>
+    <ul>
+      <!-- index作为第二个参数，用以标识下标 -->
+      <li v-for="(item, index) in users">{{ index }}.&nbsp;{{ item.name }}</li>
+    </ul>
+  </div>
+  <div style="margin-left: 170px;overflow: hidden"> <!-- BFC -->
+    <h2>用户列表</h2>
+    <ul>
+      <!-- uIndex作为第二个参数，用以标识下标 -->
+      <li v-for="(user, uIndex) of users">{{ uIndex }}.&nbsp;{{ user.name }}</li>
+    </ul>
+  </div>
+  <!-- 键值对v-for -->
+  <h2>用户列表</h2>
+  <ul>
+    <!-- index作为第二个参数，用以标识下标 -->
+    <li v-for="(user, index) in users">
+      用户{{ index + 1 }}
+      <ul>
+        <!-- key作为第二个参数，用以标识键名 -->
+        <li v-for="(value, key) of user">{{ key }}:&nbsp;{{ value }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script type="text/javascript">
+  let vm = new Vue({
+    el: '#app',
+    data () {
+      return {
+        users: [
+          {
+            name: 'Clark',
+            age: 27,
+            city: 'Chicago'
+          },
+          {
+            name: 'Jackson',
+            age: 28,
+            city: 'Sydney'
+          }
+        ]
+      }
+    }
+  })
+</script>
+</body>
+</html>

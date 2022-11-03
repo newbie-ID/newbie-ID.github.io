@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for指令</title>
+	</head>
+	<body>
+		<div id="app">
+      <p v-for="(value, key, index) in book">{{ index }}. {{ key }}：{{ value }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            book: {
+              title: 'Java无难事',
+              author: '孙鑫',
+              price: 188
+            }
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

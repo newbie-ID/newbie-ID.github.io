@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Web Worker应用</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<h3>随机产生10个100以内的2位整数:</h3>
+	<p>
+		<output id="result"></output>
+	</p>
+	<button onclick="startMyWorker()">开始 Worker-每秒产生10个整数</button>
+	<br />
+	<button onclick="stopMyWorker()">停止 Worker</button>
+	<script>
+		var worker;//定义全局变量
+		function $(id) {
+			return document.getElementById(id);
+		}//通过id获取对象
+		function startMyWorker() { //启动我的worker   
+			if (typeof (Worker) !== "undefined")//判断浏览器是否支持Web Worker
+			{
+				if (typeof (worker) == "undefined") //判断worker是否存在
+				{
+					worker = new Worker("myWorker.js");//不存在则创建Worker对象
+				}
+				worker.onmessage = function(event) {//捕获传递的消息
+					$("result").innerHTML = event.data;//显示在指定的标记内
+				}
+			} else {//浏览器不支持Web Worker  
+				$("result").innerHTML = "对不起,您的浏览器不支持Web Worker...";
+			}
+		}
+		function stopMyWorker() {
+			worker.terminate();//终止线程
+		}
+	</script>
+</body>
+</html>

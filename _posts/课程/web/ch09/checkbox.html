@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复选框</title>
+	</head>
+	<body>
+		<div id="app">
+      <h3>单个复选框</h3>
+      <p>
+        <input type="checkbox" v-model="isAgree">
+        <label>{{ isAgree }}</label>
+      </p>
+
+      <h3>多个复选框</h3>
+      <p>
+        <input type="checkbox" v-model="interests" value="篮球">
+        <label>篮球</label>
+        <input type="checkbox" v-model="interests" value="足球">
+        <label>足球</label>
+        <input type="checkbox" v-model="interests" value="排球">
+        <label>排球</label>
+        <input type="checkbox" v-model="interests" value="游泳">
+        <label>游泳</label>
+      </p>
+      <p>{{ interests }}</p>
+      
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const vm = Vue.createApp({
+        data(){
+          return {
+            isAgree: false,
+            interests: []
+          }
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

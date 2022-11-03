@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>获得、设置节点属性</title>
+<style type="text/css">
+td {
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+	var table, color   //全局变量	
+	function $(id){return document.getElementById(id);}
+	function randomInteger(){//随机产生0-255之间的整数
+		var int=Math.floor(Math.random()*256);
+		return int;
+	}
+	function changeColor(){
+		table=$("myTable");     //全局变量
+		color=table.getAttribute("bgcolor");  //保存原始值
+		var rc=randomInteger().toString(16);//转换十六进制
+		var gc=randomInteger().toString(16);//转换十六进制
+		var bc=randomInteger().toString(16);//转换十六进制
+		var color1="#"+rc+gc+bc;   //形成6位十六进制数
+		table.setAttribute("bgColor",color1);
+	}
+	function restoreColor(){
+		table.setAttribute("bgColor",color);
+	}
+</script>
+</head>
+<body>
+	<form method="post" action="">
+		<table align="center" border="1" bgColor="#99cccc" width="500px"
+			id="myTable">
+			<tr>
+				<caption>专业学生花名册</caption>
+				<td>序号</td>
+				<td>姓名</td>
+				<td>学号</td>
+				<td>专业</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>储致衡</td>
+				<td>1209520112</td>
+				<td>计算机科学与技术</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>李大磊</td>
+				<td>1303020122</td>
+				<td>软件工程</td>
+			</tr>
+			<tr>
+				<td colspan="4"><input type="button" value="更改颜色"
+					onclick="changeColor()"><input type="button" value="还原颜色"
+					onclick="restoreColor()"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

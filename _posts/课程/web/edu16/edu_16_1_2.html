@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>日期对象举例</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var now = new Date();
+		var y = now.getFullYear();
+		var m = now.getMonth() + 1;
+		var d = now.getDate();
+		var h = now.getHours();
+		var mi = now.getMinutes();
+		var s = now.getSeconds();
+		if (m < 10) {
+			m = "0" + m
+		} //处理成两位表示
+		if (d < 10) {
+			d = "0" + d
+		}
+		if (h < 10) {
+			h = "0" + h
+		}
+		if (mi < 10) {
+			mi = "0" + mi;
+		}
+		if (s < 10) {
+			s = "0" + s;
+		}
+		var str = y + "年" + m + "月" + d + "日 " + h + ":" + mi + ":" + s;
+		document.write(str);
+	</script>
+</body>
+</html>
+

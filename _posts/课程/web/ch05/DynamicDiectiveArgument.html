@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态指令参数</title>
+	</head>
+	<body>
+		<div id="app">
+			<h1 v-pin:top="100">Java无难事</h1>
+      <h1 v-pin:[direction]="100">Vue 3从入门到实战</h1>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({
+        data(){
+          return {
+            direction: 'left'
+          }
+        }
+      })
+      app.directive('pin', {
+        beforeMount(el, binding){
+          el.style.position = 'fixed'
+          let s = binding.arg || 'left'
+          el.style[s] = binding.value + 'px'
+        }
+      })
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+

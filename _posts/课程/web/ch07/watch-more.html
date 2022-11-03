@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>监听属性</title>
+	</head>
+	<body>
+		<div id="app">
+			<p><input type="text" v-model="age"></p>
+      <p v-show="info">{{ info }}</p>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      Vue.createApp({
+        data(){
+          return {
+            age: 0,
+            info: ''
+          }
+        },
+        methods: {
+          checkAge(){
+            if(this.age >= 18){
+              this.info = '已成年'
+            }
+            else{
+              this.info = '未成年'
+            }
+          }
+        },
+        watch: {
+          age: 'checkAge'
+        }
+      }).mount('#app')
+    </script>
+	</body>
+</html>
+

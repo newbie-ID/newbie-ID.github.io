@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用Prop向子组件传递数据</title>
+	</head>
+	<body>
+		<div id="app">
+      <!--
+      <post-item post-title="Java无难事"></post-item>
+      -->
+      <post-list></post-list>
+		</div>
+	
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+      const app = Vue.createApp({})
+      app.component('PostList', {
+        data(){
+          return {
+            post :{
+              title: 'Java无难事',
+              author: '孙鑫',
+              content: '经典的Java图书'
+            }
+          }
+        },
+        components: {
+          PostItem: {
+            //props: ['post'],
+            props: {
+              post: {
+                type: Object,
+                default: function(){
+                  return {}
+                }
+              }
+            },
+            template: `
+              <div>  
+                <h3>{{ post.title }}</h3>
+                <p>作者：{{ post.author }}</p>
+                <p>{{ post.content }}</p>
+              </div>
+            `
+          }
+        },
+        template: `
+          <div>
+            <p>
+              <input type="text" v-model="post.title">
+            </p>
+            <PostItem :post="post"/>
+          </div>
+          `
+      })
+      /*
+      app.component('PostItem', {
+        props: ['postTitle'],
+        template: '<h3>{{ postTitle }}</h3>'
+      })*/
+      app.mount('#app')
+    </script>
+	</body>
+</html>
+
