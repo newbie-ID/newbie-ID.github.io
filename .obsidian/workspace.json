@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/acwing/基础算法/2022-10-31-787归并排序.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/acwing/基础算法/2022-10-31-787归并排序.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/acwing/基础算法/2022-10-31-787归并排序.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/acwing/基础算法/2022-10-31-787归并排序.md"
+                "file": "index.md"
               }
             }
           }
@@ -138,6 +138,12 @@
   },
   "active": "3a1bc37b65c2bda8",
   "lastOpenFiles": [
-    "index.md"
+    "_posts/others/2022-10-31-Why-I-want-a-blog.md",
+    "_posts/课程/2022-10-31-Web技术.md",
+    "_posts/课程/2022-10-31-计算机组织与结构.md",
+    "_posts/课程/2022-10-31-概率与统计.md",
+    "index.md",
+    "_posts/课程/a.md",
+    "_posts/acwing/基础算法/2022-10-31-787归并排序.md"
   ]
 }

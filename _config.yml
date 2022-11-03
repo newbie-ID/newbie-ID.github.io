@@ -14,4 +14,3 @@ include:
   - PULL_REQUEST_TEMPLATE.md
 title: XZH's Markdown Repository
 theme: jekyll-theme-cayman
-baseurl: "/blog"
