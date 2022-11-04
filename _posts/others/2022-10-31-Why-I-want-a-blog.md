@@ -9,5 +9,4 @@
 3. 博客的前端
 
 ## 相关学习连接
-1. [Git学习视频](https://www.bilibili.com/video/BV1FE411P7B3/?spm_id_from=333.337.search-card.all.click) 属于是迟早要学，早学早享受那种
-3. [大佬的仓库](https://github.com/csjue/csjue.github.io) 面向CV开发
+1. [大佬的仓库](https://github.com/csjue/csjue.github.io) 面向CV开发
