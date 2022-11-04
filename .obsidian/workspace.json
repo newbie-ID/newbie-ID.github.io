@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "_posts/acwing/基础算法/2022-11-04-数的三次方根.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "_posts/acwing/基础算法/2022-11-04-数的三次方根.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "_posts/acwing/基础算法/2022-11-04-数的三次方根.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "_posts/acwing/基础算法/2022-11-04-数的三次方根.md"
               }
             }
           }
@@ -139,14 +139,14 @@
   "active": "3d578d7bcd9dd37d",
   "lastOpenFiles": [
     "_posts/acwing/基础算法/2022-11-04-基础算法汇总.md",
+    "_posts/acwing/基础算法/2022-11-04-逆序对的个数.md",
+    "_posts/acwing/基础算法/2022-11-04-第k个数.md",
+    "index.md",
     "_posts/others/2022-11-04-Git学习笔记.md",
     "_posts/others/dariy/2022-11-04-二〇二二-十一月.md",
     "_posts/others/dariy/2022-11-04-正经人谁写日记啊.md",
     "_posts/others/2022-10-31-建博客的那些事.md",
-    "index.md",
     "_posts/acwing/基础算法/基础算法汇总.md",
-    "_posts/acwing/基础算法/未命名.md",
-    "_posts/课程/2022-10-31-概率与统计.md",
-    "_posts/课程/2022-10-31-计算机组织与结构.md"
+    "_posts/acwing/基础算法/未命名.md"
   ]
 }
