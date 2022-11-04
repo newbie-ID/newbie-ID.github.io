@@ -12,5 +12,6 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
+  - favicon.html
 title: XZH's Markdown Repository
 theme: jekyll-theme-cayman
