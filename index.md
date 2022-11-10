@@ -1,4 +1,5 @@
 基于jekyll和github pages搭建的博客，目前用来记录一些笔记和奇奇怪怪的东西。
+
 还有好多东西要学，学！
 
 更新一点点试试
@@ -23,5 +24,5 @@
 2. [Git学习笔记](_posts/others/2022-11-04-Git学习笔记.md)
 3. [正经人谁写日记啊](_posts/others/dariy/2022-11-04-正经人谁写日记啊.md)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjMwOTA5MF19
+eyJoaXN0b3J5IjpbODc3NDQyNTc2XX0=
 -->
