@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e3fc6e8954146a99",
+            "id": "18d096a6b3524fd2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/others/2022-10-31-建博客的那些事.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307.5
+    "width": 307.5,
+    "collapsed": true
   },
   "right": {
     "id": "c630b9c65c413469",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/others/2022-10-31-建博客的那些事.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/others/2022-10-31-建博客的那些事.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/others/2022-10-31-建博客的那些事.md"
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md"
               }
             }
           }
@@ -136,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e3fc6e8954146a99",
+  "active": "b3fac1310571b313",
   "lastOpenFiles": [
-    "_posts/others/dariy/2022-11-04-正经人谁写日记啊.md",
-    "_posts/others/dariy/2022-11-04-二〇二二-十一月.md",
+    "index.md",
+    "_posts/实验/2022-11-12-计组实验.md",
     "_posts/课程/2022-10-31-计算机组织与结构.md",
-    "_posts/课程/2022-10-31-概率与统计.md",
-    "_posts/课程/2022-10-31-Web技术.md",
-    "_posts/课程/2022-11-08-离散数学.md",
-    "_posts/课程/2022-11-09-数据结构.md",
-    "_posts/others/2022-10-31-建博客的那些事.md",
+    "_posts/车协/会议记录/2022-11-06-执委会第二次线下会议.md",
     "_posts/others/2022-11-04-Git学习笔记.md",
-    "index.md"
+    "_posts/others/dariy/2022-11-04-正经人谁写日记啊.md",
+    "_posts/others/2022-10-31-建博客的那些事.md",
+    "_posts/课程/2022-11-09-数据结构.md",
+    "_posts/课程/2022-11-08-离散数学.md",
+    "_posts/课程/2022-10-31-Web技术.md"
   ]
 }
