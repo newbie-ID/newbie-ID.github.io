@@ -2,8 +2,6 @@
 
 还有好多东西要学，学！
 
-更新一点点试试
-。。。。。。。。。。。。
 
 # AcWing学习笔记
 
@@ -24,7 +22,6 @@
 
 1. [建博客的那些事](_posts/others/2022-10-31-建博客的那些事.md)
 2. [Git学习笔记](_posts/others/2022-11-04-Git学习笔记.md)
-3. [正经人谁写日记啊](_posts/others/dariy/2022-11-04-正经人谁写日记啊.md)
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbODc3NDQyNTc2XX0=
 -->
