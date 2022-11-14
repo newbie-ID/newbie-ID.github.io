@@ -1,7 +1,7 @@
-基于jekyll和github pages搭建的博客，目前用来记录一些笔记和奇奇怪怪的东西。
+基于jekyll和github pages的博客，目前用来记录一些笔记和奇奇怪怪的东西。
 
-还有好多东西要学，学！
 
+# [TODO](_posts/others/2022-11-14-TODO-LIST.md)
 
 # AcWing学习笔记
 
