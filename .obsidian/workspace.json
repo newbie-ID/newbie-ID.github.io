@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/others/2022-11-14-TODO-LIST.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201
+    "width": 201,
+    "collapsed": true
   },
   "right": {
     "id": "c630b9c65c413469",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/others/2022-11-14-TODO-LIST.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/others/2022-11-14-TODO-LIST.md",
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/others/2022-11-14-TODO-LIST.md"
+                "file": "_posts/课程/2022-10-31-计算机组织与结构.md"
               }
             }
           }
@@ -139,6 +140,7 @@
   "active": "18d096a6b3524fd2",
   "lastOpenFiles": [
     "index.md",
+    "_posts/others/2022-11-14-TODO-LIST.md",
     "_posts/课程/2022-10-31-计算机组织与结构.md",
     "_posts/课程/2022-10-31-概率与统计.md",
     "_posts/课程/2022-10-31-Web技术.md",
@@ -146,7 +148,6 @@
     "_posts/课程/2022-11-09-数据结构.md",
     "_posts/实验/2022-11-12-计组实验.md",
     "_posts/others/dariy/2022-11-04-二〇二二-十一月上.md",
-    "_posts/others/dariy/2022-11-04-日记汇总.md",
-    "_posts/others/2022-11-04-Git学习笔记.md"
+    "_posts/others/dariy/2022-11-04-日记汇总.md"
   ]
 }
