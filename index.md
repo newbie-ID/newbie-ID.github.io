@@ -14,7 +14,8 @@ ___
 2. [概率与统计](_posts/课程/2022-10-31-概率与统计.md)
 3. [计算机组织与结构](_posts/课程/2022-10-31-计算机组织与结构.md)
 4. [离散数学](_posts/课程/2022-11-08-离散数学.md)
-5. [计组实验](_posts/实验/2022-11-12-计组实验.md)
+5. [数据结构](_posts/课程/2022-11-09-数据结构.md)
+6. [计组实验](_posts/实验/2022-11-12-计组实验.md)
 
 
 
@@ -23,6 +24,6 @@ ___
 1. [建博客的那些事](_posts/others/2022-10-31-建博客的那些事.md)
 2. [Git学习笔记](_posts/others/2022-11-04-Git学习笔记.md)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ4MTY4MjUsMjAxODYxMjQyOSwtMT
-k5MTgzNjkwLDg3NzQ0MjU3Nl19
+eyJoaXN0b3J5IjpbLTY3NTM2NjYzOCwyMDE4NjEyNDI5LC0xOT
+kxODM2OTAsODc3NDQyNTc2XX0=
 -->
