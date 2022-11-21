@@ -1,7 +1,7 @@
 基于jekyll和github pages的博客，目前用来记录一些笔记和奇奇怪怪的东西。
 
+___
 
-# [TODO](_posts/others/2022-11-14-TODO-LIST.md)
 
 # AcWing学习笔记
 
@@ -23,6 +23,6 @@
 1. [建博客的那些事](_posts/others/2022-10-31-建博客的那些事.md)
 2. [Git学习笔记](_posts/others/2022-11-04-Git学习笔记.md)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODYxMjQyOSwtMTk5MTgzNjkwLDg3Nz
-Q0MjU3Nl19
+eyJoaXN0b3J5IjpbLTE5OTQ4MTY4MjUsMjAxODYxMjQyOSwtMT
+k5MTgzNjkwLDg3NzQ0MjU3Nl19
 -->
