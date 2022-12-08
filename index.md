@@ -1,5 +1,7 @@
 基于jekyll和github pages的博客，目前用来记录一些笔记和奇奇怪怪的东西。
 
+[最近在尝试用vue+github pages](https://newbie-id.github.io/vue/dist/))
+
 ___
 
 
