@@ -12,5 +12,5 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
-title: XZH's Markdown Repository
+title: 个人知识库
 theme: jekyll-theme-cayman
